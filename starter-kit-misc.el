@@ -153,5 +153,10 @@
             (unless (string-match "question" oddmuse-post)
               (setq oddmuse-post (concat "uihnscuskc=1;" oddmuse-post)))))
 
+;disable backup
+(setq backup-inhibited t)
+;disable auto save
+(setq auto-save-default nil)
+
 (provide 'starter-kit-misc)
 ;;; starter-kit-misc.el ends here
