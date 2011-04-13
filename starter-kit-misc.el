@@ -153,10 +153,13 @@
             (unless (string-match "question" oddmuse-post)
               (setq oddmuse-post (concat "uihnscuskc=1;" oddmuse-post)))))
 
-;disable backup
+;; disable backup
 (setq backup-inhibited t)
-;disable auto save
+;; disable auto save
 (setq auto-save-default nil)
+
+;; 'a' in dired mode
+(put 'dired-find-alternate-file 'disabled nil)
 
 (provide 'starter-kit-misc)
 ;;; starter-kit-misc.el ends here
