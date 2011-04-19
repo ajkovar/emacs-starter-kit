@@ -161,5 +161,7 @@
 ;; 'a' in dired mode
 (put 'dired-find-alternate-file 'disabled nil)
 
+(set-default-font "-unknown-DejaVu Sans Mono-normal-normal-normal-*-14-*-*-*-m-0-iso10646-1") 
+
 (provide 'starter-kit-misc)
 ;;; starter-kit-misc.el ends here
