@@ -153,6 +153,11 @@
             (unless (string-match "question" oddmuse-post)
               (setq oddmuse-post (concat "uihnscuskc=1;" oddmuse-post)))))
 
+(add-hook 'espresso-mode-hook
+          (lambda ()
+            (setq tab-width 4)
+            (setq indent-tabs-mode t)))
+
 ;; disable backup
 (setq backup-inhibited t)
 ;; disable auto save
