@@ -109,6 +109,7 @@
 (add-to-list 'auto-mode-alist '("Rakefile$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.js\\(on\\)?$" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.xml$" . nxml-mode))
+(add-to-list 'auto-mode-alist '("buildfile$" . ruby-mode))
 
 (eval-after-load 'grep
   '(when (boundp 'grep-find-ignored-files)
