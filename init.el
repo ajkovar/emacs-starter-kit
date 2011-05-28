@@ -62,6 +62,7 @@
 (require 'starter-kit-ruby)
 (require 'starter-kit-js)
 (require 'vimpulse)
+(require 'grep-find-project)
 
 (regen-autoloads)
 (load custom-file 'noerror)

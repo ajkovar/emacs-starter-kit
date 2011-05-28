@@ -91,5 +91,7 @@
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
 
+(global-set-key (kbd "<f5> f") 'grep-find-project)
+
 (provide 'starter-kit-bindings)
 ;;; starter-kit-bindings.el ends here
