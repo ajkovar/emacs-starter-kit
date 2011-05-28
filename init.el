@@ -63,6 +63,7 @@
 (require 'starter-kit-js)
 (require 'vimpulse)
 (require 'grep-find-project)
+(require 'find-file-in-project-extension)
 
 (regen-autoloads)
 (load custom-file 'noerror)
