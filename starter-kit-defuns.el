@@ -99,6 +99,9 @@ Symbols matching the text at point are put first in the completion list."
 (defun adjust-ffip-patterns ()
   (set (make-local-variable 'ffip-patterns) nil))
 
+(defun newline-and-indent-on-return()
+  (local-set-key (kbd "RET") 'newline-and-indent))
+
 (add-hook 'coding-hook 'local-column-number-mode)
 (add-hook 'coding-hook 'turn-on-hl-line-mode)
 (add-hook 'coding-hook 'turn-on-save-place-mode)
@@ -106,6 +109,7 @@ Symbols matching the text at point are put first in the completion list."
 (add-hook 'coding-hook 'add-watchwords)
 (add-hook 'coding-hook 'turn-on-idle-highlight)
 (add-hook 'coding-hook 'adjust-ffip-patterns)
+(add-hook 'coding-hook 'newline-and-indent-on-return)
   
 (defun run-coding-hook ()
   "Enable things that are convenient across all coding buffers."
