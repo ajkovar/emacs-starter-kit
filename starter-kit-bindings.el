@@ -92,6 +92,7 @@
 (define-key global-map "\C-ca" 'org-agenda)
 
 (global-set-key (kbd "<f5> f") 'grep-find-project)
+(global-set-key (kbd "<f5> M-f") 'lgrep)
 (global-set-key (kbd "<f5> r") 'find-file-in-project-wrapper)
 
 (provide 'starter-kit-bindings)
