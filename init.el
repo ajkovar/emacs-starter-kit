@@ -61,9 +61,13 @@
 (require 'starter-kit-perl)
 (require 'starter-kit-ruby)
 (require 'starter-kit-js)
+
+;; other stuff
+
 (require 'vimpulse)
 (require 'grep-find-project)
 (require 'find-file-in-project-extension)
+(require 'sr-speedbar)
 
 (regen-autoloads)
 (load custom-file 'noerror)

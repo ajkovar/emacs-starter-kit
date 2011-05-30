@@ -95,5 +95,7 @@
 (global-set-key (kbd "<f5> M-f") 'lgrep)
 (global-set-key (kbd "<f5> r") 'find-file-in-project-wrapper)
 
+(global-set-key (kbd "<f8>") 'sr-speedbar-toggle)
+
 (provide 'starter-kit-bindings)
 ;;; starter-kit-bindings.el ends here

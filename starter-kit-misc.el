@@ -160,9 +160,8 @@
             (setq indent-tabs-mode t)))
 
 (add-hook 'magit-mode-hook
-          (lambda ()
-            (local-set-key "q" 'delete-window)))
-     
+          (lambda () (local-set-key "q" 'delete-window)))
+
 ;; disable backup
 (setq backup-inhibited t)
 ;; disable auto save
