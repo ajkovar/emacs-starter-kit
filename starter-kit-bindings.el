@@ -94,6 +94,7 @@
 (global-set-key (kbd "<f5> f") 'grep-find-project)
 (global-set-key (kbd "<f5> M-f") 'lgrep)
 (global-set-key (kbd "<f5> r") 'find-file-in-project-wrapper)
+(global-set-key (kbd "<f5> t") 'switch-between-test-and-source)
 
 (global-set-key (kbd "<f8>") 'sr-speedbar-toggle)
 
