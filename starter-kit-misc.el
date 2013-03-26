@@ -160,6 +160,21 @@
             (setq tab-width 4)
             (setq indent-tabs-mode t)))
 
+(add-hook 'html-mode-hook
+          (lambda ()
+            (setq tab-width 4)
+            (setq indent-tabs-mode t)))
+
+(add-hook 'nxml-mode-hook
+          (lambda ()
+            (setq tab-width 4)
+            (setq indent-tabs-mode t)))
+
+(add-hook 'css-mode-hook
+          (lambda ()
+            (setq tab-width 4)
+            (setq indent-tabs-mode t)))
+
 (add-hook 'magit-mode-hook
           (lambda () (local-set-key "q" 'delete-window)))
 
