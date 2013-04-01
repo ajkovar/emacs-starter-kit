@@ -13,8 +13,10 @@
 ;; If you prefer js2-mode, use this instead:
 ;; (add-to-list 'auto-mode-alist '("\\.js$" . espresso-mode))
 
+(add-hook 'espresso-mode-hook 'esk-paredit-nonlisp)
 (eval-after-load 'espresso
-  '(progn
+  '(progn (define-key espresso-mode-map "{" 'paredit-open-curly)
+          (define-key espresso-mode-map "}" 'paredit-close-curly-and-newline)
           ;; fixes problem with pretty function font-lock
           (define-key espresso-mode-map (kbd ",") 'self-insert-command)
           (font-lock-add-keywords
