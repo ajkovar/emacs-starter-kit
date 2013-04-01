@@ -66,7 +66,6 @@
 
 (require 'grep-find-project)
 (require 'find-file-in-project-extension)
-(require 'sr-speedbar)
 (require 'test-switcher)
 
 (regen-autoloads)

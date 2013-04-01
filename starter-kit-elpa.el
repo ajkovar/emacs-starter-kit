@@ -13,7 +13,8 @@
                                    'clojure-mode
                                    'magit
                                    'gist
-                                   'evil)
+                                   'evil
+                                   'sr-speedbar)
   "Libraries that should be installed by default.")
 
 (defun starter-kit-elpa-install ()
