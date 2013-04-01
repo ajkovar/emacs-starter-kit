@@ -32,7 +32,7 @@
   (interactive)
   (if ffip-patterns
       (find-file-in-project)
-    (let ((file (ido-completing-read "Choose recent file: " (directory-files-recursive (ffip-project-root)) nil t)))
+    (let ((file (ido-completing-read "Choose file: " (directory-files-recursive (ffip-project-root)) nil t)))
       (when file
         (find-file file)))))
 
