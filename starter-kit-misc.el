@@ -133,7 +133,6 @@
 
 (eval-after-load 'magit
   '(progn
-     (add-to-list 'viper-emacs-state-mode-list 'magit-key-mode)
      (set-face-foreground 'magit-diff-add "green3")
      (set-face-foreground 'magit-diff-del "red3")))
 

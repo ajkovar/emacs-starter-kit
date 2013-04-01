@@ -12,7 +12,8 @@
                                    'find-file-in-project
                                    'clojure-mode
                                    'magit
-                                   'gist)
+                                   'gist
+                                   'evil)
   "Libraries that should be installed by default.")
 
 (defun starter-kit-elpa-install ()

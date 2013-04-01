@@ -64,7 +64,6 @@
 
 ;; other stuff
 
-(require 'vimpulse)
 (require 'grep-find-project)
 (require 'find-file-in-project-extension)
 (require 'sr-speedbar)
@@ -72,6 +71,8 @@
 
 (regen-autoloads)
 (load custom-file 'noerror)
+
+(evil-mode 1)
 
 ;; You can keep system- or user-specific customizations here
 (setq system-specific-config (concat dotfiles-dir system-name ".el")
