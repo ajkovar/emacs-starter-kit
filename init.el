@@ -72,6 +72,7 @@
 (load custom-file 'noerror)
 
 (evil-mode 1)
+(setq evil-default-cursor t)
 
 ;; You can keep system- or user-specific customizations here
 (setq system-specific-config (concat dotfiles-dir system-name ".el")
