@@ -15,6 +15,7 @@
                                    'gist
                                    'evil
                                    'sr-speedbar
+                                   'yasnippet
                                    'dash)
   "Libraries that should be installed by default.")
 
