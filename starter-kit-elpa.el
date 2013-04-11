@@ -14,7 +14,8 @@
                                    'magit
                                    'gist
                                    'evil
-                                   'sr-speedbar)
+                                   'sr-speedbar
+                                   'dash)
   "Libraries that should be installed by default.")
 
 (defun starter-kit-elpa-install ()

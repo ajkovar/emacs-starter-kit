@@ -1,12 +1,12 @@
 (require 'find-file-in-project)
+(require 'dash)
 
 ;; gets a listing of all files in a directory filtering out ones that are uninteresting
 (defun get-clean-file-listing (directory)
-  (remove-if (lambda (full-path)
-               (file-symlink-p full-path))
+  (remove-if #'file-symlink-p
              (mapcar (lambda (file)
-                       ;; add full path
-                       (concat (file-name-as-directory directory) file))
+                     ;; add full path
+                     (concat (file-name-as-directory directory) file))
                      (remove-if (lambda (file)
                                   (or
                                    ;; remove hidden directories
@@ -20,20 +20,18 @@
 
 ;; alternate implentation of file-file-in-project
 (defun directory-files-recursive (directory)
-  (let (subdirectory-files)
-    (dolist (file (get-clean-file-listing directory))
-      (if (file-directory-p file)
-          (setq subdirectory-files (append subdirectory-files (directory-files-recursive file)))))
-    (setq files (remove-if 'file-directory-p files))
-    (setq files (append files subdirectory-files))))
+  (-flatten
+   (mapcar (lambda (file)
+           (if (file-directory-p file)
+               (directory-files-recursive file)
+             file))
+         (get-clean-file-listing directory))))
 
 (defun find-file-in-project-wrapper ()
   "Wrapper around find-file-in-project to speed it up when there is no filter on file types to be searched"
   (interactive)
-  (if ffip-patterns
-      (find-file-in-project)
-    (let ((file (ido-completing-read "Choose file: " (directory-files-recursive (ffip-project-root)) nil t)))
-      (when file
-        (find-file file)))))
+  (let ((file (ido-completing-read "Choose file: " (directory-files-recursive (ffip-project-root)) nil t)))
+    (when file
+      (find-file file))))
 
 (provide 'find-file-in-project-extension)
